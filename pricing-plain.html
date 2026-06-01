@@ -20,8 +20,24 @@
 
   /* Header */
   .header { text-align: center; margin-bottom: 28px; }
-  .header img { height: 64px; margin-bottom: 8px; }
-  .header h1 { font-size: 22px; font-weight: 900; color: #1A1A3E; margin-bottom: 4px; }
+  .logo-wrap {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+  .mascot-img {
+    height: 110px;
+    width: auto;
+    display: block;
+  }
+  .wordmark-img {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40px;
+    width: auto;
+  }
   .header .contact { font-size: 12px; font-weight: 700; color: #555; line-height: 1.8; }
   .header .contact a { color: #FF2D8E; text-decoration: none; }
 
@@ -68,9 +84,12 @@
 <body>
 
 <div class="header">
-  <img src="assets/stacked_pink_blue.png" alt="Superior Snowballs">
+  <div class="logo-wrap">
+    <img src="assets/thumbs-up_stacked.png" class="mascot-img" alt="Superior Snowballs mascot">
+    <img src="assets/stacked_pink_blue.png" class="wordmark-img" alt="Superior Snowballs">
+  </div>
   <div class="contact">
-    (832) 600-2201 &nbsp;·&nbsp; <a href="mailto:hello@superiorsnowballs.com">hello@superiorsnowballs.com</a><br>
+    (832) 366-1402 &nbsp;·&nbsp; <a href="mailto:superior.snowballs@gmail.com">superior.snowballs@gmail.com</a><br>
     Sugar Land · Richmond · Rosenberg · Fort Bend County
   </div>
 </div>
