@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Superior Snowballs — Pricing Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+  @page { size: letter; margin: .45in .5in; }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    color: #1A1A3E;
+    background: #fff;
+    font-size: 11px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ── RAINBOW BAR ── */
+  .rainbow {
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(90deg,
+      #FF2D8E 0 20%, #F4A24B 20% 36%, #F9CF45 36% 52%,
+      #3FB24E 52% 68%, #38B8E8 68% 84%, #8E5BC9 84% 100%);
+    margin-bottom: 14px;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #EBF8FE;
+  }
+  .logo-block { display: flex; align-items: center; gap: 6px; }
+  .logo-block img { height: 44px; width: auto; }
+  .header-contact {
+    text-align: right;
+    font-size: 10px;
+    color: #5A5A75;
+    font-weight: 700;
+    line-height: 1.7;
+  }
+  .header-contact a { color: #FF2D8E; text-decoration: none; }
+  .pricing-title {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: #38B8E8;
+  }
+
+  /* ── SECTION LABELS ── */
+  .section-label {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: #FF2D8E;
+    margin-bottom: 6px;
+  }
+  .section-title {
+    font-size: 15px;
+    font-weight: 900;
+    color: #1A1A3E;
+    margin-bottom: 10px;
+  }
+
+  /* ── PACKAGES ── */
+  .packages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
+
+  .pkg {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+  }
+  .pkg-header { padding: 10px 11px 8px; position: relative; }
+  .pkg-tag {
+    position: absolute; top: 0; right: 10px;
+    background: #F9CF45; color: #1A1A3E;
+    font-size: 7px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+    padding: 2px 7px; border-radius: 0 0 6px 6px;
+  }
+  .pkg-icon { font-size: 16px; margin-bottom: 4px; }
+  .pkg-name { font-size: 13px; font-weight: 900; color: #fff; line-height: 1; margin-bottom: 2px; }
+  .pkg-tagline { font-size: 8.5px; font-weight: 600; color: rgba(255,255,255,.85); margin-bottom: 6px; }
+  .pkg-price { font-size: 22px; font-weight: 900; color: #fff; line-height: 1; }
+  .pkg-price-note { font-size: 8px; color: rgba(255,255,255,.75); font-weight: 700; margin-left: 3px; }
+
+  .pkg-pink .pkg-header  { background: linear-gradient(135deg, #FF2D8E, #FF6BBF); }
+  .pkg-blue .pkg-header  { background: linear-gradient(135deg, #38B8E8, #62D0F5); }
+  .pkg-green .pkg-header { background: linear-gradient(135deg, #3FB24E, #5FD06E); }
+
+  .pkg-body { padding: 9px 11px 10px; background: #fff; }
+  .pkg-chips { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 7px; }
+  .pkg-chip {
+    background: #F2F2F0; border-radius: 999px;
+    padding: 2px 7px; font-size: 8px; font-weight: 700; color: #5A5A75;
+  }
+  .pkg-features { list-style: none; display: flex; flex-direction: column; gap: 3px; margin-bottom: 8px; }
+  .pkg-features li { font-size: 9px; color: #222235; line-height: 1.4; display: flex; gap: 5px; align-items: flex-start; }
+  .pkg-features li::before { content: "✓"; font-weight: 900; flex-shrink: 0; }
+  .pkg-pink  .pkg-features li::before { color: #FF2D8E; }
+  .pkg-blue  .pkg-features li::before { color: #38B8E8; }
+  .pkg-green .pkg-features li::before { color: #3FB24E; }
+
+  .pkg-btn {
+    display: block; width: 100%; text-align: center;
+    padding: 5px; border-radius: 999px;
+    font-weight: 800; font-size: 8.5px; color: #fff;
+    text-decoration: none;
+  }
+  .pkg-pink  .pkg-btn { background: #FF2D8E; }
+  .pkg-blue  .pkg-btn { background: #38B8E8; }
+  .pkg-green .pkg-btn { background: #3FB24E; }
+  .pkg-overage { text-align: center; font-size: 7.5px; color: #9898B0; font-weight: 700; margin-top: 4px; }
+
+  /* ── ADDONS + FLAVORS ROW ── */
+  .lower { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+
+  .addons-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4px;
+  }
+  .addon-row {
+    display: flex; align-items: center; gap: 6px;
+    background: #F7FAFE; border-radius: 8px; padding: 5px 7px;
+  }
+  .addon-icon { font-size: 13px; flex-shrink: 0; }
+  .addon-name { font-size: 8.5px; font-weight: 700; color: #1A1A3E; }
+  .addon-price { font-size: 8px; font-weight: 700; color: #FF2D8E; }
+
+  /* flavors */
+  .flavor-chips { display: flex; flex-wrap: wrap; gap: 4px; }
+  .flavor-chip {
+    display: inline-flex; align-items: center; gap: 4px;
+    background: #fff; border: 1px solid #e8e8e8; border-radius: 999px;
+    padding: 3px 8px; font-size: 8.5px; font-weight: 700;
+  }
+  .flavor-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .flavor-note { font-size: 8px; color: #9898B0; font-weight: 700; margin-top: 5px; }
+
+  /* ── FOOTER ── */
+  .sheet-footer {
+    border-top: 1.5px solid #EBF8FE;
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 8.5px;
+    color: #9898B0;
+    font-weight: 700;
+  }
+  .sheet-footer a { color: #FF2D8E; text-decoration: none; }
+  .sheet-footer .cta {
+    background: #1A1A3E; color: #fff;
+    padding: 4px 12px; border-radius: 999px; font-size: 8.5px; font-weight: 800;
+    text-decoration: none;
+  }
+
+  @media print {
+    body { font-size: 11px; }
+    .no-print { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="rainbow"></div>
+
+<!-- Header -->
+<div class="header">
+  <div class="logo-block">
+    <img src="assets/mascot-running.png" alt="Superior Snowballs mascot">
+    <img src="assets/stacked_pink_blue.png" alt="Superior Snowballs" style="height:38px;">
+  </div>
+  <div style="text-align:center;">
+    <div class="pricing-title">2026 Pricing Guide</div>
+    <div style="font-size:9px;color:#9898B0;font-weight:700;margin-top:2px;">All prices include tax · Sugar Land, Richmond, Rosenberg & Fort Bend County</div>
+  </div>
+  <div class="header-contact">
+    <div>(832) 600-2201</div>
+    <div>Sugar Land, TX · Fort Bend County</div>
+    <div><a href="mailto:hello@superiorsnowballs.com">hello@superiorsnowballs.com</a></div>
+  </div>
+</div>
+
+<!-- Packages -->
+<div class="section-label">Our Packages</div>
+<div class="packages">
+
+  <!-- Sweet Starter -->
+  <div class="pkg pkg-pink">
+    <div class="pkg-header">
+      <div class="pkg-icon">🌸</div>
+      <div class="pkg-name">Sweet Starter</div>
+      <div class="pkg-tagline">Perfect for smaller gatherings</div>
+      <div><span class="pkg-price">$225</span><span class="pkg-price-note">+ tax</span></div>
+    </div>
+    <div class="pkg-body">
+      <div class="pkg-chips">
+        <span class="pkg-chip">⏱ 1 hour</span>
+        <span class="pkg-chip">🧊 50 snow cones</span>
+        <span class="pkg-chip">🍓 6 flavors</span>
+      </div>
+      <ul class="pkg-features">
+        <li>Regular toppings bar</li>
+        <li>1 snow expert on site</li>
+        <li>Full mobile setup &amp; breakdown</li>
+      </ul>
+      <a href="#" class="pkg-btn">Book Sweet Starter →</a>
+      <p class="pkg-overage">$3.50 per snow cone over 50</p>
+    </div>
+  </div>
+
+  <!-- The Classic -->
+  <div class="pkg pkg-blue">
+    <div class="pkg-header">
+      <div class="pkg-tag">⭐ Most Popular</div>
+      <div class="pkg-icon">🎉</div>
+      <div class="pkg-name">The Classic</div>
+      <div class="pkg-tagline">The go-to for any event</div>
+      <div><span class="pkg-price">$350</span><span class="pkg-price-note">+ tax</span></div>
+    </div>
+    <div class="pkg-body">
+      <div class="pkg-chips">
+        <span class="pkg-chip">⏱ 2 hours</span>
+        <span class="pkg-chip">🧊 100 snow cones</span>
+        <span class="pkg-chip">🍓 8 flavors</span>
+      </div>
+      <ul class="pkg-features">
+        <li>Full regular toppings bar</li>
+        <li>1–2 snow experts on site</li>
+        <li>Full mobile setup &amp; breakdown</li>
+      </ul>
+      <a href="#" class="pkg-btn">Book The Classic →</a>
+      <p class="pkg-overage">$3.50 per snow cone over 100</p>
+    </div>
+  </div>
+
+  <!-- Superior Event -->
+  <div class="pkg pkg-green">
+    <div class="pkg-header">
+      <div class="pkg-icon">👑</div>
+      <div class="pkg-name">Superior Event</div>
+      <div class="pkg-tagline">The full experience</div>
+      <div><span class="pkg-price">$525</span><span class="pkg-price-note">+ tax</span></div>
+    </div>
+    <div class="pkg-body">
+      <div class="pkg-chips">
+        <span class="pkg-chip">⏱ Up to 3 hrs</span>
+        <span class="pkg-chip">🧊 150 snow cones</span>
+        <span class="pkg-chip">🍓 10 flavors</span>
+      </div>
+      <ul class="pkg-features">
+        <li>Snow cone experts on-site</li>
+        <li>Full mobile setup &amp; breakdown</li>
+      </ul>
+      <a href="#" class="pkg-btn">Book Superior Event →</a>
+      <p class="pkg-overage">$3.50 per snow cone over 150</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- Add-ons + Flavors -->
+<div class="lower">
+  <div>
+    <div class="section-label">Add-ons &amp; Extras</div>
+    <div class="addons-grid">
+      <div class="addon-row"><span class="addon-icon">✨</span><div><div class="addon-name">Specialty flavors (Salty Dog, Piccadilly, Mango Nada, Natural Lemon/Lime)</div></div></div>
+      <div class="addon-row"><span class="addon-icon">🍬</span><div><div class="addon-name">Regular toppings (cream, tajin, chamoy)</div></div></div>
+      <div class="addon-row"><span class="addon-icon">🍯</span><div><div class="addon-name">Premium toppings (pickle bits, skittles, nerds, sour patch kids)</div></div></div>
+      <div class="addon-row"><span class="addon-icon">🍭</span><div><div class="addon-name">Kandy Kabobs (set of 15)</div></div></div>
+      <div class="addon-row"><span class="addon-icon">🧊</span><div><div class="addon-name">Custom signature snow cone</div></div></div>
+      <div class="addon-row"><span class="addon-icon">🍋</span><div><div class="addon-name">Fresh squeezed lemonade</div></div></div>
+      <div class="addon-row"><span class="addon-icon">⏱</span><div><div class="addon-name">30-min time overage fee</div></div></div>
+      <div class="addon-row"><span class="addon-icon">🕐</span><div><div class="addon-name">60-min time overage fee</div></div></div>
+      <div class="addon-row"><span class="addon-icon">🚗</span><div><div class="addon-name">Travel fee (15+ miles)</div></div></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="section-label">Flavor Lineup — 18+ Options</div>
+    <div class="flavor-chips">
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#B22234"></div>Wild Cherry</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#FF5E7A"></div>Watermelon</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#FF7AA8"></div>Strawberry</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#F4A24B"></div>Mango</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#F9CF45"></div>Pineapple</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#E9D24A"></div>Banana</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#A6D84A"></div>Sour Apple</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#38B8E8"></div>Blue Raspberry</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#5EC6E8"></div>Piña Colada</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#FF9F45"></div>Dreamsicle</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#8E5BC9"></div>Grape</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#B07AD6"></div>Cotton Candy</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#5BC8E8"></div>Blue Bubble Gum</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#E8C8A0"></div>Wedding Cake</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#FF2D8E"></div>Pink Lemonade</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#C0304A"></div>Tigers Blood</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#3FB24E"></div>Lime</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#F0EFE8"></div>White Coconut</div>
+    </div>
+    <p class="flavor-note">…plus Sour Apple and seasonal additions! Final selection confirmed at booking.</p>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="sheet-footer">
+  <div>© 2026 Superior Snowballs Shaved Ice Company · Sugar Land, TX</div>
+  <div>(832) 600-2201 · <a href="mailto:hello@superiorsnowballs.com">hello@superiorsnowballs.com</a></div>
+  <a href="#" class="cta">Book Now →</a>
+</div>
+
+<div class="rainbow" style="margin-top:10px;margin-bottom:0;"></div>
+
+</body>
+</html>

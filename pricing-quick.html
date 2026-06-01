@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Superior Snowballs — Quick Pricing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+  @page { size: letter portrait; margin: 0.45in 0.5in; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: #fff;
+    color: #1A1A3E;
+    width: 7.5in;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .rainbow {
+    height: 7px;
+    background: linear-gradient(90deg,
+      #FF2D8E 0 20%, #F4A24B 20% 36%, #F9CF45 36% 52%,
+      #3FB24E 52% 68%, #38B8E8 68% 84%, #8E5BC9 84% 100%);
+  }
+
+  .card { padding: 28px 32px 24px; }
+
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    padding-bottom: 18px;
+    border-bottom: 1.5px solid #EBF8FE;
+  }
+  .logo-row { display: flex; align-items: center; gap: 0; }
+  .logo-row img:first-child { height: 60px; }
+  .logo-row img:last-child  { height: 42px; margin-left: -12px; }
+  .contact {
+    text-align: right;
+    font-size: 12px;
+    font-weight: 700;
+    color: #5A5A75;
+    line-height: 1.9;
+  }
+  .contact a { color: #FF2D8E; text-decoration: none; }
+  .contact .phone { font-size: 15px; font-weight: 900; color: #1A1A3E; }
+
+  /* Section label */
+  .eyebrow {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: #FF2D8E;
+    margin-bottom: 14px;
+  }
+
+  /* Packages */
+  .packages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+
+  .pkg { border-radius: 18px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.10); }
+
+  .pkg-header { padding: 18px 16px 14px; position: relative; }
+  .pkg-tag {
+    position: absolute; top: 0; right: 14px;
+    background: #F9CF45; color: #1A1A3E;
+    font-size: 8px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+    padding: 3px 9px; border-radius: 0 0 8px 8px;
+  }
+  .pkg-icon { font-size: 24px; margin-bottom: 6px; }
+  .pkg-name { font-size: 20px; font-weight: 900; color: #fff; line-height: 1; margin-bottom: 3px; }
+  .pkg-sub  { font-size: 10.5px; font-weight: 600; color: rgba(255,255,255,.85); margin-bottom: 12px; }
+  .pkg-price { font-size: 36px; font-weight: 900; color: #fff; line-height: 1; }
+  .pkg-note  { font-size: 10px; font-weight: 700; color: rgba(255,255,255,.75); }
+
+  .pkg-pink  .pkg-header { background: linear-gradient(135deg, #FF2D8E, #FF6BBF); }
+  .pkg-blue  .pkg-header { background: linear-gradient(135deg, #38B8E8, #62D0F5); }
+  .pkg-green .pkg-header { background: linear-gradient(135deg, #3FB24E, #5FD06E); }
+
+  .pkg-body { padding: 14px 16px 16px; background: #fff; }
+
+  .pkg-details { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+  .pkg-details li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #222235;
+  }
+  .pkg-details li .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .pkg-pink  .dot { background: #FF2D8E; }
+  .pkg-blue  .dot { background: #38B8E8; }
+  .pkg-green .dot { background: #3FB24E; }
+
+  .pkg-overage {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #F2F2F0;
+    font-size: 9.5px;
+    color: #9898B0;
+    font-weight: 700;
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 22px;
+    padding-top: 16px;
+    border-top: 1.5px solid #EBF8FE;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-note {
+    font-size: 10px;
+    color: #9898B0;
+    font-weight: 700;
+    line-height: 1.7;
+  }
+  .book-btn {
+    background: #1A1A3E; color: #fff;
+    padding: 9px 24px; border-radius: 999px;
+    font-size: 11px; font-weight: 800;
+    text-decoration: none; white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+
+<div class="rainbow"></div>
+
+<div class="card">
+
+  <div class="header">
+    <div class="logo-row">
+      <img src="assets/mascot-running.png" alt="">
+      <img src="assets/stacked_pink_blue.png" alt="Superior Snowballs">
+    </div>
+    <div class="contact">
+      <div class="phone">(832) 600-2201</div>
+      <div>Sugar Land · Richmond · Rosenberg · Fort Bend County</div>
+      <div><a href="mailto:hello@superiorsnowballs.com">hello@superiorsnowballs.com</a></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">2026 Packages — All prices + tax</div>
+
+  <div class="packages">
+
+    <!-- Sweet Starter -->
+    <div class="pkg pkg-pink">
+      <div class="pkg-header">
+        <div class="pkg-icon">🌸</div>
+        <div class="pkg-name">Sweet Starter</div>
+        <div class="pkg-sub">Perfect for smaller gatherings</div>
+        <div class="pkg-price">$225</div>
+        <div class="pkg-note">+ tax</div>
+      </div>
+      <div class="pkg-body">
+        <ul class="pkg-details">
+          <li><span class="dot"></span>1 hour service</li>
+          <li><span class="dot"></span>Up to 50 snow cones</li>
+          <li><span class="dot"></span>Up to 6 flavor choices</li>
+          <li><span class="dot"></span>Snow cone expert on-site</li>
+          <li><span class="dot"></span>Full mobile setup & breakdown</li>
+        </ul>
+        <p class="pkg-overage">$3.50 per snow cone over 50</p>
+      </div>
+    </div>
+
+    <!-- The Classic -->
+    <div class="pkg pkg-blue">
+      <div class="pkg-tag">⭐ Most Popular</div>
+      <div class="pkg-header">
+        <div class="pkg-icon">🎉</div>
+        <div class="pkg-name">The Classic</div>
+        <div class="pkg-sub">The go-to for any event</div>
+        <div class="pkg-price">$350</div>
+        <div class="pkg-note">+ tax</div>
+      </div>
+      <div class="pkg-body">
+        <ul class="pkg-details">
+          <li><span class="dot"></span>2 hour service</li>
+          <li><span class="dot"></span>Up to 100 snow cones</li>
+          <li><span class="dot"></span>Up to 8 flavor choices</li>
+          <li><span class="dot"></span>Snow cone experts on-site</li>
+          <li><span class="dot"></span>Full mobile setup & breakdown</li>
+        </ul>
+        <p class="pkg-overage">$3.50 per snow cone over 100</p>
+      </div>
+    </div>
+
+    <!-- Superior Event -->
+    <div class="pkg pkg-green">
+      <div class="pkg-header">
+        <div class="pkg-icon">👑</div>
+        <div class="pkg-name">Superior Event</div>
+        <div class="pkg-sub">The full experience</div>
+        <div class="pkg-price">$525</div>
+        <div class="pkg-note">+ tax</div>
+      </div>
+      <div class="pkg-body">
+        <ul class="pkg-details">
+          <li><span class="dot"></span>Up to 3 hours service</li>
+          <li><span class="dot"></span>Up to 150 snow cones</li>
+          <li><span class="dot"></span>Up to 10 flavor choices</li>
+          <li><span class="dot"></span>Snow cone experts on-site</li>
+          <li><span class="dot"></span>Full mobile setup & breakdown</li>
+        </ul>
+        <p class="pkg-overage">$3.50 per snow cone over 150</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="footer-note">
+      Add-ons available: specialty flavors, regular & premium toppings, kandy kabobs, custom snow cone, fresh squeezed lemonade &amp; more.<br>
+      Travel fee may apply for events 15+ miles from Sugar Land. Contact us for a custom quote.
+    </div>
+    <a href="https://square.site/book/TME781CX3TVXK/superior-snowballs-shaved-ice" class="book-btn">Book Now →</a>
+  </div>
+
+</div>
+
+<div class="rainbow"></div>
+
+</body>
+</html>

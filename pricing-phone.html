@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=390, initial-scale=1.0"/>
+<title>Superior Snowballs — Pricing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(160deg, #ffffff 0%, #F0F9FF 60%, #E2F0F9 100%);
+    color: #1A1A3E;
+    width: 390px;
+  }
+
+  .rainbow {
+    height: 6px;
+    background: linear-gradient(90deg,
+      #FF2D8E 0 20%, #F4A24B 20% 36%, #F9CF45 36% 52%,
+      #3FB24E 52% 68%, #38B8E8 68% 84%, #8E5BC9 84% 100%);
+  }
+
+  .card { padding: 20px 18px 18px; }
+
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+  .logo-row { display: flex; align-items: center; }
+  .logo-row img:first-child { height: 48px; }
+  .logo-row img:last-child  { height: 32px; margin-left: -10px; }
+  .contact {
+    text-align: right;
+    font-size: 10px;
+    font-weight: 700;
+    color: #5A5A75;
+    line-height: 1.7;
+  }
+  .contact a { color: #FF2D8E; text-decoration: none; }
+
+  /* Packages */
+  .eyebrow {
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #FF2D8E;
+    margin-bottom: 10px;
+  }
+
+  .pkg {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 3px 14px rgba(0,0,0,.10);
+    margin-bottom: 10px;
+  }
+
+  .pkg-header {
+    padding: 12px 14px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  .pkg-tag {
+    position: absolute; top: 0; right: 12px;
+    background: #F9CF45; color: #1A1A3E;
+    font-size: 7px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+    padding: 2px 7px; border-radius: 0 0 6px 6px;
+  }
+  .pkg-left { display: flex; align-items: center; gap: 8px; }
+  .pkg-icon { font-size: 18px; }
+  .pkg-name { font-size: 15px; font-weight: 900; color: #fff; line-height: 1; }
+  .pkg-sub  { font-size: 9px; font-weight: 600; color: rgba(255,255,255,.85); }
+  .pkg-price-block { text-align: right; }
+  .pkg-price { font-size: 22px; font-weight: 900; color: #fff; line-height: 1; }
+  .pkg-price-note { font-size: 9px; font-weight: 700; color: rgba(255,255,255,.75); }
+
+  .pkg-pink  .pkg-header { background: linear-gradient(135deg, #FF2D8E, #FF6BBF); }
+  .pkg-blue  .pkg-header { background: linear-gradient(135deg, #38B8E8, #62D0F5); }
+  .pkg-green .pkg-header { background: linear-gradient(135deg, #3FB24E, #5FD06E); }
+
+  .pkg-body {
+    padding: 9px 14px 10px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .pkg-stats {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .stat-chip {
+    background: #F2F2F0;
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 9px;
+    font-weight: 700;
+    color: #5A5A75;
+  }
+  .pkg-overage {
+    font-size: 8.5px;
+    font-weight: 700;
+    color: #9898B0;
+  }
+
+  /* Footer */
+  .footer-note {
+    margin-top: 6px;
+    font-size: 9px;
+    font-weight: 700;
+    color: #9898B0;
+    text-align: center;
+    line-height: 1.7;
+    padding: 0 4px;
+  }
+
+  .book-btn {
+    display: block;
+    margin: 12px auto 0;
+    width: 100%;
+    background: #1A1A3E;
+    color: #fff;
+    text-align: center;
+    padding: 11px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="rainbow"></div>
+
+<div class="card">
+
+  <div class="header">
+    <div class="logo-row">
+      <img src="assets/mascot-running.png" alt="">
+      <img src="assets/stacked_pink_blue.png" alt="Superior Snowballs">
+    </div>
+    <div class="contact">
+      <div style="font-size:11px;font-weight:900;color:#1A1A3E;">(832) 600-2201</div>
+      <div>Sugar Land · Fort Bend County</div>
+      <div><a href="mailto:hello@superiorsnowballs.com">hello@superiorsnowballs.com</a></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">2026 Packages — Prices + tax</div>
+
+  <div class="pkg pkg-pink">
+    <div class="pkg-header">
+      <div class="pkg-left">
+        <span class="pkg-icon">🌸</span>
+        <div>
+          <div class="pkg-name">Sweet Starter</div>
+          <div class="pkg-sub">Smaller gatherings</div>
+        </div>
+      </div>
+      <div class="pkg-price-block">
+        <div class="pkg-price">$225</div>
+        <div class="pkg-price-note">+ tax</div>
+      </div>
+    </div>
+    <div class="pkg-body">
+      <div class="pkg-stats">
+        <span class="stat-chip">⏱ 1 hour</span>
+        <span class="stat-chip">🧊 50 cones</span>
+        <span class="stat-chip">🍓 6 flavors</span>
+      </div>
+      <span class="pkg-overage">+$3.50/cone over 50</span>
+    </div>
+  </div>
+
+  <div class="pkg pkg-blue">
+    <div class="pkg-header">
+      <div class="pkg-tag">⭐ Most Popular</div>
+      <div class="pkg-left">
+        <span class="pkg-icon">🎉</span>
+        <div>
+          <div class="pkg-name">The Classic</div>
+          <div class="pkg-sub">The go-to for any event</div>
+        </div>
+      </div>
+      <div class="pkg-price-block">
+        <div class="pkg-price">$350</div>
+        <div class="pkg-price-note">+ tax</div>
+      </div>
+    </div>
+    <div class="pkg-body">
+      <div class="pkg-stats">
+        <span class="stat-chip">⏱ 2 hours</span>
+        <span class="stat-chip">🧊 100 cones</span>
+        <span class="stat-chip">🍓 8 flavors</span>
+      </div>
+      <span class="pkg-overage">+$3.50/cone over 100</span>
+    </div>
+  </div>
+
+  <div class="pkg pkg-green">
+    <div class="pkg-header">
+      <div class="pkg-left">
+        <span class="pkg-icon">👑</span>
+        <div>
+          <div class="pkg-name">Superior Event</div>
+          <div class="pkg-sub">The full experience</div>
+        </div>
+      </div>
+      <div class="pkg-price-block">
+        <div class="pkg-price">$525</div>
+        <div class="pkg-price-note">+ tax</div>
+      </div>
+    </div>
+    <div class="pkg-body">
+      <div class="pkg-stats">
+        <span class="stat-chip">⏱ Up to 3 hrs</span>
+        <span class="stat-chip">🧊 150 cones</span>
+        <span class="stat-chip">🍓 10 flavors</span>
+      </div>
+      <span class="pkg-overage">+$3.50/cone over 150</span>
+    </div>
+  </div>
+
+  <p class="footer-note">
+    Add-ons available at booking · Travel fee may apply 15+ miles<br>
+    18+ bold flavors · Snow cone experts on-site · Full mobile setup
+  </p>
+
+  <a href="https://square.site/book/TME781CX3TVXK/superior-snowballs-shaved-ice" class="book-btn">
+    Book Your Event →
+  </a>
+
+</div>
+
+<div class="rainbow"></div>
+
+</body>
+</html>

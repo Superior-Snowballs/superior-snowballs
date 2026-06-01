@@ -1,0 +1,1886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Superior Snowballs – Mobile Shaved Ice | Sugar Land, Richmond, Rosenberg TX</title>
+<meta name="description" content="Premium mobile shaved ice for birthdays, organizations, schools & events. Serving Sugar Land, Richmond, Rosenberg, Katy, Missouri City, Stafford, Wharton & Fort Bend County. Book today!" />
+<meta name="keywords" content="shaved ice Sugar Land TX, snow cones Sugar Land, mobile shaved ice Fort Bend County, shaved ice Richmond TX, shaved ice Rosenberg TX, snow cone party rental, shaved ice truck Katy TX, Superior Snowballs" />
+<meta property="og:title" content="Superior Snowballs – Mobile Shaved Ice | Sugar Land TX" />
+<meta property="og:description" content="Premium mobile shaved ice for events & parties. Serving Fort Bend County — Sugar Land, Richmond, Rosenberg, Katy & surrounding areas." />
+<meta property="og:type" content="website" />
+<link rel="canonical" href="https://www.superiorsnowballs.com/" />
+<link rel="icon" type="image/png" href="assets/mascot-running.png">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+<style>
+/* ── TOKENS ──────────────────────────────────────────────────────── */
+:root {
+  --pink:    #FF2D8E;
+  --pink-lt: #FFF0F8;
+  --pink-dk: #D4006E;
+  --blue:    #38B8E8;
+  --blue-lt: #EBF8FE;
+  --blue-dk: #1A9ED0;
+  --green:   #3FB24E;
+  --green-lt:#EDFAF1;
+  --green-dk:#2E9040;
+  --orange:  #F4A24B;
+  --yellow:  #F9CF45;
+  --purple:  #8E5BC9;
+  --navy:    #1A1A3E;
+  --white:   #FFFFFF;
+  --off-white: #FAFAF8;
+  --wash: #F2F8FD;
+  --gray:    #F2F2F0;
+  --text:    #222235;
+  --text-mid:#5A5A75;
+  --text-lt: #9898B0;
+
+  --font-display: 'Nunito', sans-serif;
+  --font-body:    'Nunito', sans-serif;
+
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --radius-xl: 48px;
+
+  --shadow-sm: 0 2px 8px rgba(0,0,0,.08);
+  --shadow-md: 0 8px 24px rgba(0,0,0,.10);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,.14);
+  --shadow-pink: 0 8px 32px rgba(255,45,142,.25);
+  --shadow-blue: 0 8px 32px rgba(56,184,232,.25);
+
+  --max-w: 1160px;
+  --pad: clamp(20px, 5vw, 48px);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+/* ── ACCESSIBILITY ───────────────────────────────────────────────── */
+/* Skip navigation — visible on focus, hidden otherwise */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--navy);
+  color: #fff;
+  font-weight: 800;
+  font-size: .95rem;
+  padding: .6em 1.2em;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  z-index: 9999;
+  text-decoration: none;
+  transition: top .15s;
+}
+.skip-link:focus { top: 0; }
+
+/* Visible focus ring for keyboard users */
+:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+/* Remove outline for mouse users */
+:focus:not(:focus-visible) { outline: none; }
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: linear-gradient(to bottom, #ffffff 0%, #F8FCFF 45%, #EFF8FD 75%, #E6F4FB 100%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+
+.wrap { max-width: var(--max-w); margin: 0 auto; padding-inline: var(--pad); }
+
+/* ── RAINBOW TOPBAR ──────────────────────────────────────────────── */
+.topbar {
+  height: 6px;
+  background: linear-gradient(90deg,
+    var(--pink) 0 20%,
+    var(--orange) 20% 36%,
+    var(--yellow) 36% 52%,
+    var(--green) 52% 68%,
+    var(--blue) 68% 84%,
+    var(--purple) 84% 100%
+  );
+}
+
+/* ── NAV ─────────────────────────────────────────────────────────── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1.5px solid var(--pink-lt);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 88px;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.nav-mascot-img {
+  height: 92px;
+  width: auto;
+  object-fit: contain;
+}
+.nav-wordmark-img {
+  height: 54px;
+  width: auto;
+  object-fit: contain;
+  margin-left: -42px;
+}
+.nav-links {
+  display: flex;
+  gap: 1.8rem;
+  margin-left: auto;
+  align-items: center;
+}
+.nav-links a {
+  font-weight: 700;
+  font-size: .95rem;
+  color: var(--text-mid);
+  transition: color .15s;
+}
+.nav-links a:hover { color: var(--pink); }
+.nav-cta {
+  display: flex;
+  gap: .6rem;
+  align-items: center;
+  margin-left: 1rem;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .4em;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: .95rem;
+  padding: .6em 1.4em;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: transform .12s, box-shadow .12s;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary {
+  background: var(--navy);
+  color: var(--white);
+  box-shadow: 0 8px 24px rgba(26,26,62,.25);
+}
+.btn-primary:hover { background: #2a2a5a; box-shadow: 0 12px 32px rgba(26,26,62,.35); }
+.btn-outline {
+  background: transparent;
+  color: var(--navy);
+  border: 2px solid var(--navy);
+}
+.btn-outline:hover { background: var(--navy); color: var(--white); }
+.btn-blue {
+  background: var(--blue);
+  color: var(--white);
+  box-shadow: var(--shadow-blue);
+}
+.btn-blue:hover { background: var(--blue-dk); }
+.btn-lg { font-size: 1.1rem; padding: .75em 1.8em; }
+
+/* ── HERO ──────────────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  background: transparent;
+  overflow: hidden;
+  padding: clamp(3rem, 8vw, 6rem) 0 clamp(2rem, 6vw, 4rem);
+}
+/* Decorative blobs */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(56,184,232,.12) 0%, transparent 70%);
+  top: -200px; right: -200px;
+  pointer-events: none;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(56,184,232,.10) 0%, transparent 70%);
+  bottom: -100px; left: -100px;
+  pointer-events: none;
+}
+.hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: var(--white);
+  border: 2px solid var(--pink-lt);
+  border-radius: 999px;
+  padding: .35em 1em;
+  font-weight: 800;
+  font-size: .8rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 1.2rem;
+  box-shadow: var(--shadow-sm);
+}
+.hero-eyebrow::before {
+  content: "";
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--pink);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .5; transform: scale(1.3); }
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.15;
+  color: var(--navy);
+  margin-bottom: 1.2rem;
+}
+.hero h1 .pop { color: var(--navy); }
+.hero-lead {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: var(--text-mid);
+  line-height: 1.7;
+  max-width: 44ch;
+  margin-bottom: 2rem;
+}
+.hero-btns {
+  display: flex;
+  gap: .8rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.trust-row {
+  display: flex;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  font-weight: 700;
+  font-size: .88rem;
+  color: var(--text-mid);
+}
+.trust-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.hero-art {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Placeholder mascot circle — replace with actual PNG */
+.mascot-placeholder {
+  width: min(420px, 100%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, var(--pink-lt), var(--blue-lt));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8rem;
+  filter: drop-shadow(0 20px 40px rgba(255,45,142,.2));
+  position: relative;
+}
+.mascot-placeholder::after {
+  content: "Superior Snowballs";
+  position: absolute;
+  bottom: 10%;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--pink);
+  text-shadow: 1px 1px 0 var(--blue);
+}
+/* Floating badges around mascot */
+.float-badge {
+  position: absolute;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: .6rem .9rem;
+  box-shadow: var(--shadow-md);
+  font-weight: 800;
+  font-size: .82rem;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  animation: float 3s ease-in-out infinite;
+}
+.float-badge:nth-child(2) { animation-delay: -.8s; top: 8%; right: 2%; }
+.float-badge:nth-child(3) { animation-delay: -1.6s; bottom: 18%; left: 0%; }
+.float-badge:nth-child(4) { animation-delay: -.4s; bottom: 8%; right: 5%; }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ── WAVY DIVIDER ──────────────────────────────────────────────────── */
+.wave {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.wave svg { display: block; width: 100%; }
+
+/* ── FEATURES STRIP ──────────────────────────────────────────────── */
+.features {
+  background: transparent;
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.feature-card {
+  background: var(--white);
+  border: 2px solid transparent;
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.6rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform .2s, box-shadow .2s;
+  position: relative;
+  overflow: hidden;
+}
+.feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  padding: 2px;
+  background: linear-gradient(135deg, var(--c1), var(--c2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity .2s;
+}
+.feature-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.feature-card:hover::before { opacity: 1; }
+.feature-card:nth-child(1) { --c1: var(--pink); --c2: var(--orange); }
+.feature-card:nth-child(2) { --c1: var(--blue); --c2: var(--green); }
+.feature-card:nth-child(3) { --c1: var(--purple); --c2: var(--pink); }
+.feature-icon {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 1.2rem;
+}
+.feature-card h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: .5rem;
+  color: var(--navy);
+}
+.feature-card p {
+  font-size: .95rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+/* ── PACKAGES ──────────────────────────────────────────────────────── */
+.packages {
+  background: transparent;
+  padding: clamp(3.5rem, 8vw, 6rem) 0;
+}
+.section-head {
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+.eyebrow-label {
+  display: inline-block;
+  font-weight: 800;
+  font-size: .78rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: .7rem;
+}
+.section-head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: .6rem;
+}
+.section-head p {
+  font-size: 1.05rem;
+  color: var(--text-mid);
+  max-width: 54ch;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+.pkg { display: flex; flex-direction: column; }
+.pkg-body { display: flex; flex-direction: column; flex: 1; }
+.pkg-features { flex: 1; }
+.pkg {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background: var(--white);
+  position: relative;
+  transition: transform .2s, box-shadow .2s;
+}
+.pkg:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.pkg-header {
+  padding: 2rem 1.6rem 1.6rem;
+  position: relative;
+}
+.pkg-tag {
+  position: absolute;
+  top: -1px; right: 1.4rem;
+  background: var(--yellow);
+  color: var(--navy);
+  font-weight: 800;
+  font-size: .72rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .4em 1em;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+.pkg-icon { font-size: 2.4rem; margin-bottom: .8rem; }
+.pkg-name {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: .3rem;
+}
+.pkg-tagline { font-size: .9rem; font-weight: 600; opacity: .9; color: var(--white); }
+.pkg-price-wrap {
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: baseline;
+  gap: .3rem;
+}
+.pkg-price {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  color: var(--white);
+  line-height: 1;
+}
+.pkg-price-note { font-size: .88rem; color: rgba(255,255,255,.8); font-weight: 700; }
+.pkg-body {
+  padding: 1.6rem;
+}
+.pkg-meta {
+  display: flex;
+  gap: .8rem;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+}
+.pkg-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  background: var(--gray);
+  border-radius: 999px;
+  padding: .3em .9em;
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--text-mid);
+}
+.pkg-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .55rem;
+  margin-bottom: 1.6rem;
+}
+.pkg-features li {
+  display: flex;
+  gap: .55rem;
+  align-items: flex-start;
+  font-size: .93rem;
+  color: var(--text);
+  line-height: 1.4;
+}
+.pkg-features li::before {
+  content: "✓";
+  font-weight: 900;
+  flex-shrink: 0;
+  margin-top: .05em;
+}
+.pkg-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: .8em;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: .95rem;
+  border: none;
+  cursor: pointer;
+  transition: transform .12s, filter .12s;
+  color: var(--white);
+  text-decoration: none;
+}
+.pkg-btn:hover { transform: translateY(-1px); filter: brightness(1.08); }
+.pkg-overage {
+  margin-top: .8rem;
+  font-size: .8rem;
+  color: var(--text-lt);
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Package color themes */
+.pkg-pink .pkg-header { background: linear-gradient(135deg, var(--pink), #FF6BBF); }
+.pkg-pink .pkg-features li::before { color: var(--pink); }
+.pkg-pink .pkg-btn { background: var(--pink); }
+
+.pkg-blue .pkg-header { background: linear-gradient(135deg, var(--blue), #62D0F5); }
+.pkg-blue .pkg-features li::before { color: var(--blue); }
+.pkg-blue .pkg-btn { background: var(--blue); }
+
+.pkg-green .pkg-header { background: linear-gradient(135deg, var(--green), #5FD06E); }
+.pkg-green .pkg-features li::before { color: var(--green); }
+.pkg-green .pkg-btn { background: var(--green); }
+
+/* ── FLAVORS ─────────────────────────────────────────────────────── */
+.flavors {
+  background: transparent;
+  padding: clamp(1.5rem, 3vw, 2.5rem) 0 clamp(3rem, 7vw, 5rem);
+}
+.flavor-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.flavor-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: var(--white);
+  border-radius: 999px;
+  padding: .45em 1.1em;
+  font-weight: 700;
+  font-size: .9rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform .12s, box-shadow .12s;
+}
+.flavor-chip:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.flavor-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.flavor-more {
+  margin-top: 1.2rem;
+  text-align: center;
+  font-weight: 700;
+  color: var(--text-mid);
+  font-size: .95rem;
+}
+
+/* ── ADD-ONS ─────────────────────────────────────────────────────── */
+.addons {
+  background: transparent;
+  padding: clamp(1.5rem, 3vw, 2.5rem) 0 clamp(3rem, 7vw, 5rem);
+}
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.addon-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--off-white);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.2rem;
+  border: 1.5px solid transparent;
+  transition: border-color .15s, transform .15s;
+}
+.addon-card:hover { border-color: var(--pink-lt); transform: translateX(4px); }
+.addon-icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  width: 44px; height: 44px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addon-info { flex: 1; }
+.addon-name { font-weight: 800; font-size: .95rem; color: var(--navy); }
+.addon-price { font-weight: 700; font-size: .85rem; color: var(--pink); margin-top: 2px; }
+
+/* ── ABOUT ─────────────────────────────────────────────────────────── */
+.about {
+  background: var(--green);
+  padding: clamp(3rem, 7vw, 5rem) 0;
+  position: relative;
+  overflow: hidden;
+}
+.about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.06'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.about-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+.about h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.about p {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,.9);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+.about-stats {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1.8rem;
+  flex-wrap: wrap;
+}
+.stat {
+  background: rgba(255,255,255,.18);
+  border-radius: var(--radius-md);
+  padding: .8rem 1.1rem;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.2);
+}
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  color: var(--white);
+  line-height: 1;
+}
+.stat-label {
+  font-size: .78rem;
+  font-weight: 700;
+  color: rgba(255,255,255,.75);
+  margin-top: 2px;
+}
+.about-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-mascot-wrap {
+  width: min(360px, 100%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(255,255,255,.15);
+  backdrop-filter: blur(8px);
+  border: 3px solid rgba(255,255,255,.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,.15);
+}
+
+/* ── BOOKING CTA ─────────────────────────────────────────────────── */
+.book-cta {
+  background: transparent;
+  padding: clamp(3rem, 8vw, 5.5rem) 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.book-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  color: var(--navy);
+  margin-bottom: .8rem;
+  line-height: 1.2;
+}
+.book-cta p {
+  font-size: 1.1rem;
+  color: var(--text-mid);
+  max-width: 52ch;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+.book-cta-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── INQUIRY FORM ────────────────────────────────────────────────── */
+.inquiry-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.inquiry-left h2 { text-align: left; }
+.inquiry-left p  { text-align: left; margin-inline: 0; }
+.inquiry-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.8rem 0;
+}
+.inquiry-divider::before,
+.inquiry-divider::after {
+  content: "";
+  flex: 1;
+  height: 1.5px;
+  background: var(--gray);
+}
+.inquiry-divider span {
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-lt);
+  white-space: nowrap;
+}
+.inquiry-form {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.inquiry-form h3 {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--navy);
+  margin-bottom: .2rem;
+}
+.inquiry-form p {
+  font-size: .88rem;
+  color: var(--text-mid);
+  margin-bottom: .5rem;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+}
+.form-group label {
+  font-size: .82rem;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: .02em;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  font-family: var(--font-body);
+  font-size: .92rem;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--off-white);
+  border: 1.5px solid var(--gray);
+  border-radius: var(--radius-sm);
+  padding: .6em .85em;
+  width: 100%;
+  transition: border-color .15s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  background: var(--white);
+}
+.form-group textarea { resize: vertical; min-height: 90px; }
+.form-submit {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.form-submit .btn {
+  width: 100%;
+  justify-content: center;
+  font-size: 1rem;
+  padding: .75em 1.5em;
+}
+.form-submit small {
+  text-align: center;
+  font-size: .75rem;
+  color: var(--text-lt);
+  font-weight: 700;
+}
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+  color: var(--green-dk);
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 780px) {
+  .inquiry-wrap { grid-template-columns: 1fr; }
+  .inquiry-left h2, .inquiry-left p { text-align: center; }
+  .form-row { grid-template-columns: 1fr; }
+}
+.btn-white {
+  background: var(--white);
+  color: var(--pink);
+  box-shadow: 0 8px 24px rgba(0,0,0,.2);
+}
+.btn-white:hover { background: var(--pink-lt); }
+.btn-outline-white {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,.5);
+}
+.btn-outline-white:hover { background: rgba(255,255,255,.1); border-color: var(--white); }
+
+/* ── SERVICE AREA ──────────────────────────────────────────────────── */
+.area {
+  background: transparent;
+  padding: clamp(2.5rem, 6vw, 4.5rem) 0;
+}
+.area-inner {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.area-chip {
+  background: var(--white);
+  border: 2px solid var(--blue-lt);
+  border-radius: 999px;
+  padding: .45em 1.1em;
+  font-weight: 700;
+  font-size: .9rem;
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
+}
+.area-chip-green {
+  background: rgba(255,255,255,.18);
+  border: 1.5px solid rgba(255,255,255,.3);
+  border-radius: 999px;
+  padding: .35em .9em;
+  font-weight: 700;
+  font-size: .82rem;
+  color: rgba(255,255,255,.9);
+  display: inline-block;
+}
+
+/* ── FOOTER ──────────────────────────────────────────────────────── */
+.footer {
+  background: var(--navy);
+  color: rgba(255,255,255,.7);
+}
+.footer-rainbow-bar {
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg,
+    var(--pink) 0 20%,
+    var(--orange) 20% 36%,
+    var(--yellow) 36% 52%,
+    var(--green) 52% 68%,
+    var(--blue) 68% 84%,
+    var(--purple) 84% 100%
+  );
+}
+.footer-slim {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: .8rem;
+  padding-bottom: .6rem;
+  gap: .3rem;
+}
+/* hero mascot — transparent PNG, circle bubble sits behind */
+.hero-mascot-wrap {
+  position: relative;
+  width: min(660px, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-mascot-wrap::before {
+  content: "";
+  position: absolute;
+  width: 78%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--blue-lt);
+  top: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  box-shadow: 0 20px 60px rgba(56,184,232,.18);
+}
+.hero-mascot-wrap img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+}
+.footer-logo img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+.footer-legal {
+  text-align: center;
+  font-size: .75rem;
+  color: rgba(255,255,255,.3);
+}
+/* Rainbow bar in footer */
+.footer-rainbow {
+  height: 5px;
+  width: 100px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--pink), var(--orange), var(--yellow), var(--green), var(--blue), var(--purple));
+  margin: 0 auto .8rem;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .hero-grid, .about-grid { grid-template-columns: 1fr; text-align: center; }
+  .hero-lead { margin-inline: auto; }
+  .hero-btns, .trust-row { justify-content: center; }
+  .hero-art { order: -1; }
+  .about-art { order: -1; }
+  .features-grid { grid-template-columns: 1fr; }
+  .packages-grid { grid-template-columns: 1fr; max-width: 480px; margin-inline: auto; }
+  .nav-links { display: none; }
+}
+@media (max-width: 600px) {
+  .packages-grid { max-width: 100%; }
+}
+
+/* ── PHOTO CAROUSEL ─────────────────────────────────────────────── */
+.photo-carousel {
+  position: relative;
+  width: min(400px, 100%);
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,.22);
+}
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity .6s ease;
+  background: rgba(255,255,255,.1);
+}
+.carousel-slide.active { opacity: 1; }
+.carousel-slide img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.carousel-slide-placeholder {
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+  background: rgba(255,255,255,.08);
+  color: rgba(255,255,255,.5);
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.carousel-slide-placeholder span { font-size: 2.5rem; }
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,.18);
+  backdrop-filter: blur(6px);
+  border: none;
+  border-radius: 50%;
+  width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  transition: background .15s;
+  z-index: 2;
+}
+.carousel-btn:hover { background: rgba(255,255,255,.32); }
+.carousel-prev { left: 12px; }
+.carousel-next { right: 12px; }
+.carousel-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 7px;
+  z-index: 2;
+}
+.carousel-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: rgba(255,255,255,.4);
+  transition: background .2s, transform .2s;
+  padding: 0;
+}
+.carousel-dot.active {
+  background: #fff;
+  transform: scale(1.3);
+}
+
+/* ── ANIMATIONS ──────────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp .6s ease both; }
+.fade-up:nth-child(2) { animation-delay: .1s; }
+.fade-up:nth-child(3) { animation-delay: .2s; }
+.fade-up:nth-child(4) { animation-delay: .3s; }
+
+/* ── BOOKING MODAL ───────────────────────────────────────── */
+.booking-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.booking-modal.open { display: flex; }
+.booking-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(26,26,62,.65);
+  backdrop-filter: blur(6px);
+}
+.booking-modal-panel {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  width: min(520px, 100%);
+  height: min(680px, calc(100vh - 2rem));
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalIn .22s ease both;
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(20px) scale(.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.booking-modal-close {
+  position: absolute;
+  top: 10px; right: 10px;
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 34px; height: 34px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .15s;
+}
+.booking-modal-close:hover { background: #2a2a5a; }
+.booking-modal-iframe {
+  width: 100%; flex: 1;
+  border: none;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+.booking-modal-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+  color: var(--text-mid);
+  font-weight: 700;
+  font-size: .95rem;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  transition: opacity .3s;
+}
+.booking-modal-loading.hidden { opacity: 0; pointer-events: none; }
+.loading-spinner {
+  width: 36px; height: 36px;
+  border: 3px solid var(--gray);
+  border-top-color: var(--pink);
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── SQUARE WIDGET TRIGGERS ──────────────────────────────── */
+.sq-widget-trigger {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* ── NAV SCROLL SHADOW ───────────────────────────────────── */
+.nav { transition: box-shadow .2s; }
+.nav.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,.08); }
+
+/* ── MOBILE NAV ──────────────────────────────────────────── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  margin-left: .5rem;
+  flex-shrink: 0;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2.5px;
+  background: var(--navy);
+  border-radius: 99px;
+  transition: transform .22s ease, opacity .22s ease;
+  transform-origin: center;
+}
+.nav-hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.nav-hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+.mobile-menu {
+  overflow: hidden;
+  max-height: 0;
+  background: rgba(255,255,255,.97);
+  backdrop-filter: blur(16px);
+  border-bottom: 1.5px solid transparent;
+  transition: max-height .32s cubic-bezier(.4,0,.2,1), border-color .32s;
+}
+.mobile-menu.open { max-height: 300px; border-bottom-color: var(--pink-lt); }
+.mobile-menu-inner { display: flex; flex-direction: column; padding: .5rem 0 1rem; }
+.mobile-link {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-mid);
+  padding: .8rem 0;
+  border-bottom: 1px solid var(--gray);
+  transition: color .15s;
+  text-decoration: none;
+}
+.mobile-link:last-child { border-bottom: none; }
+.mobile-link:hover { color: var(--pink); }
+.mobile-cta {
+  margin-top: .5rem;
+  background: var(--navy);
+  color: var(--white) !important;
+  text-align: center;
+  border-radius: 999px;
+  padding: .75rem 1rem !important;
+  font-weight: 800;
+  border-bottom: none !important;
+}
+.mobile-cta:hover { background: #2a2a5a !important; }
+@media (max-width: 900px) {
+  .nav-hamburger { display: flex; }
+  .nav-cta { display: none; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FoodEstablishment",
+  "name": "Superior Snowballs Shaved Ice Company",
+  "description": "Premium mobile shaved ice for birthdays, organizations, schools, and events across Fort Bend County and Southwest Houston.",
+  "url": "https://www.superiorsnowballs.com",
+  "telephone": "+18326002201",
+  "email": "hello@superiorsnowballs.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Sugar Land",
+    "addressRegion": "TX",
+    "postalCode": "77479",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    "Sugar Land, TX", "Richmond, TX", "Rosenberg, TX",
+    "Missouri City, TX", "Katy, TX", "Stafford, TX",
+    "Pearland, TX", "Wharton, TX", "Fort Bend County, TX"
+  ],
+  "servesCuisine": "Shaved Ice",
+  "priceRange": "$225–$525",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "description": "By appointment — mobile event service"
+  },
+  "sameAs": []
+}
+</script>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Rainbow Topbar -->
+<div class="topbar" aria-hidden="true"></div>
+
+<!-- Nav -->
+<header class="nav" role="banner">
+  <div class="wrap nav-inner">
+    <a href="#" class="nav-logo" aria-label="Superior Snowballs — home">
+      <img src="assets/mascot-running.png" class="nav-mascot-img" alt="" aria-hidden="true">
+      <img src="assets/stacked_pink_blue.png" class="nav-wordmark-img" alt="Superior Snowballs">
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#packages">Packages</a>
+      <a href="#flavors">Flavors</a>
+      <a href="#about">About & Service Area</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#book" class="btn btn-outline" aria-label="Request a quote">Request a Quote</a>
+      <a href="https://square.site/book/TME781CX3TVXK/superior-snowballs-shaved-ice" data-book="https://calendly.com/superior-snowballs" class="btn btn-primary">Book Now</a>
+    </div>
+    <button class="nav-hamburger" id="navHamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile menu">
+    <div class="wrap mobile-menu-inner">
+      <a href="#packages" class="mobile-link">Packages</a>
+      <a href="#flavors" class="mobile-link">Flavors</a>
+      <a href="#about" class="mobile-link">About &amp; Service Area</a>
+      <a href="https://square.site/book/TME781CX3TVXK/superior-snowballs-shaved-ice" data-book="https://calendly.com/superior-snowballs" class="mobile-link mobile-cta">Book Now →</a>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<main id="main-content">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy fade-up">
+      <div class="hero-eyebrow">🍧 Sugar Land · Fort Bend County · SW Houston</div>
+      <h1>The <span class="pop">sweetest</span> treat at your next event.</h1>
+      <p class="hero-lead">Premium mobile shaved ice with 20+ bold flavors, custom signature cones, and everything you need to make your event unforgettable — we bring the cart, the smiles, and the rainbow to you.</p>
+      <div class="hero-btns">
+        <a href="#packages" class="btn btn-primary btn-lg">See Packages</a>
+        <a href="#book" class="btn btn-outline btn-lg">Request a Quote</a>
+      </div>
+    </div>
+    <div class="hero-art fade-up">
+      <div class="hero-mascot-wrap">
+        <img src="assets/thumbs-up_stacked.png" alt="Superior Snowballs mascot giving a thumbs up on a tropical island">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Features -->
+<section class="features">
+  <div class="wrap">
+    <div class="features-grid">
+      <div class="feature-card fade-up">
+        <div class="feature-icon" style="background:var(--pink-lt)">🎉</div>
+        <h3>Private Parties</h3>
+        <p>Birthdays, graduations, quinceañeras, block parties, and backyard get-togethers — we come to you and handle everything.</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon" style="background:var(--blue-lt)">🏆</div>
+        <h3>Organizations & Schools</h3>
+        <p>Little league teams, school spirit nights, field days, and fundraisers. We show up all season long and make your organization's events unforgettable.</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon" style="background:var(--green-lt)">🎪</div>
+        <h3>Festivals & Big Events</h3>
+        <p>High-volume service that keeps lines moving and guests happy. Custom branded options available for large events.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Packages -->
+<section class="packages" id="packages">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow-label">Our Packages</p>
+      <h2>Pick a package, we'll do the rest.</h2>
+      <p>All prices include tax. Choose your flavors and add-ons at booking. We handle setup, service, and breakdown.</p>
+    </div>
+    <div class="packages-grid">
+
+      <!-- Sweet Starter -->
+      <div class="pkg pkg-pink fade-up">
+        <div class="pkg-header">
+          <div class="pkg-icon">🌸</div>
+          <div class="pkg-name">Sweet Starter</div>
+          <div class="pkg-tagline">Perfect for smaller gatherings</div>
+          <div class="pkg-price-wrap">
+            <div class="pkg-price">$225</div>
+            <div class="pkg-price-note">+ tax</div>
+          </div>
+        </div>
+        <div class="pkg-body">
+          <ul class="pkg-features">
+            <li>1 hour service</li>
+            <li>50 snow cones</li>
+            <li>6 flavor choices</li>
+            <li>Snow cone experts on-site</li>
+            <li>Full mobile setup & breakdown</li>
+          </ul>
+          <a href="https://square.site/book/TME781CX3TVXK/superior-snowballs-shaved-ice" data-book="https://calendly.com/superior-snowballs/30min" class="pkg-btn" style="background:var(--pink)">Book Sweet Starter →</a>
+          <p class="pkg-overage">$3.50 per snow cone over 50</p>
+        </div>
+      </div>
+
+      <!-- The Classic -->
+      <div class="pkg pkg-blue fade-up">
+        <div class="pkg-tag">⭐ Most Popular</div>
+        <div class="pkg-header">
+          <div class="pkg-icon">🎉</div>
+          <div class="pkg-name">The Classic</div>
+          <div class="pkg-tagline">The go-to for any event</div>
+          <div class="pkg-price-wrap">
+            <div class="pkg-price">$350</div>
+            <div class="pkg-price-note">+ tax</div>
+          </div>
+        </div>
+        <div class="pkg-body">
+          <ul class="pkg-features">
+            <li>2 hour service</li>
+            <li>100 snow cones</li>
+            <li>8 flavor choices</li>
+            <li>Snow cone experts on-site</li>
+            <li>Full mobile setup & breakdown</li>
+          </ul>
+          <a href="https://square.site/book/TME781CX3TVXK/superior-snowballs-shaved-ice" data-book="https://calendly.com/superior-snowballs/the-classic" class="pkg-btn" style="background:var(--blue)">Book The Classic →</a>
+          <p class="pkg-overage">$3.50 per snow cone over 100</p>
+        </div>
+      </div>
+
+      <!-- Superior Event -->
+      <div class="pkg pkg-green fade-up">
+        <div class="pkg-header">
+          <div class="pkg-icon">👑</div>
+          <div class="pkg-name">Superior Event</div>
+          <div class="pkg-tagline">The full experience</div>
+          <div class="pkg-price-wrap">
+            <div class="pkg-price">$525</div>
+            <div class="pkg-price-note">+ tax</div>
+          </div>
+        </div>
+        <div class="pkg-body">
+          <ul class="pkg-features">
+            <li>Up to 3 hours service</li>
+            <li>150 snow cones</li>
+            <li>10 flavor choices</li>
+            <li>Snow cone experts on-site</li>
+            <li>Full mobile setup & breakdown</li>
+          </ul>
+          <a href="https://square.site/book/TME781CX3TVXK/superior-snowballs-shaved-ice" data-book="https://calendly.com/superior-snowballs/premium-event" class="pkg-btn" style="background:var(--green)">Book Superior Event →</a>
+          <p class="pkg-overage">$3.50 per snow cone over 150</p>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <p style="color:var(--text-mid); font-size:1rem; line-height:1.6; margin-bottom:1rem;">Not sure which package fits? Fill out the form below and we'll help you find the right one.</p>
+      <a href="#book" class="btn btn-outline btn-lg">Request a Custom Quote →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Add-ons -->
+<section class="addons" id="addons">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow-label">Customize Your Experience</p>
+      <h2>Add-ons & extras.</h2>
+      <p>Build the perfect experience for your event with our à la carte options.</p>
+    </div>
+    <div class="addons-grid">
+      <div class="addon-card">
+        <div class="addon-icon" style="background:var(--blue-lt)">✨</div>
+        <div class="addon-info">
+          <div class="addon-name">Specialty flavors — Salty Dog, Piccadilly, Mango Nada, Natural Lemon or Lime</div>
+        </div>
+      </div>
+      <div class="addon-card">
+        <div class="addon-icon" style="background:var(--pink-lt)">🍬</div>
+        <div class="addon-info">
+          <div class="addon-name">Regular toppings — cream, tajin, chamoy</div>
+        </div>
+      </div>
+      <div class="addon-card">
+        <div class="addon-icon" style="background:#FFF5E6">🍯</div>
+        <div class="addon-info">
+          <div class="addon-name">Premium toppings — pickle bits, skittles, nerds, sour patch kids</div>
+        </div>
+      </div>
+      <div class="addon-card">
+        <div class="addon-icon" style="background:#F9F0FF">🍭</div>
+        <div class="addon-info">
+          <div class="addon-name">Kandy Kabobs (set of 15)</div>
+        </div>
+      </div>
+      <div class="addon-card">
+        <div class="addon-icon" style="background:var(--green-lt)">🧊</div>
+        <div class="addon-info">
+          <div class="addon-name">Custom signature snow cone</div>
+        </div>
+      </div>
+      <div class="addon-card">
+        <div class="addon-icon" style="background:#FFFBE6">🍋</div>
+        <div class="addon-info">
+          <div class="addon-name">Fresh squeezed lemonade</div>
+        </div>
+      </div>
+      <div class="addon-card">
+        <div class="addon-icon" style="background:var(--pink-lt)">⏱</div>
+        <div class="addon-info">
+          <div class="addon-name">30-min time overage — fee applies if event runs over by 30 min</div>
+        </div>
+      </div>
+      <div class="addon-card">
+        <div class="addon-icon" style="background:var(--pink-lt)">🕐</div>
+        <div class="addon-info">
+          <div class="addon-name">60-min time overage — fee applies if event runs over by 1 hour</div>
+        </div>
+      </div>
+      <div class="addon-card">
+        <div class="addon-icon" style="background:#FFF8E0">🚗</div>
+        <div class="addon-info">
+          <div class="addon-name">Travel fee (15+ miles)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Flavors -->
+<section class="flavors" id="flavors">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow-label">The Flavor Lineup</p>
+      <h2>Rainbow of flavors, one happy crowd.</h2>
+      <p>18+ bold flavors to choose from. Mix, match, and make it yours.</p>
+    </div>
+    <div class="flavor-chips">
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#B22234"></div> Wild Cherry</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#FF5E7A"></div> Watermelon</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#FF7AA8"></div> Strawberry</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#F4A24B"></div> Mango</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#F9CF45"></div> Pineapple</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#E9D24A"></div> Banana</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#A6D84A"></div> Sour Apple</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#38B8E8"></div> Blue Raspberry</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#5EC6E8"></div> Piña Colada</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#FF9F45"></div> Dreamsicle</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#8E5BC9"></div> Grape</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#B07AD6"></div> Cotton Candy</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#5BC8E8"></div> Blue Bubble Gum</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#E8C8A0"></div> Wedding Cake</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#FF2D8E"></div> Pink Lemonade</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#C0304A"></div> Tigers Blood</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#3FB24E"></div> Lime</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#F0EFE8"></div> White Coconut</div>
+    </div>
+    <p class="flavor-more">…plus Sour Apple and seasonal additions! Final selection confirmed at booking.</p>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div>
+      <h2>A family-run shaved ice company that shows up and shows out.</h2>
+      <p>Based in Sugar Land, Texas, Superior Snowballs is a mobile shaved ice business built on years of events and a whole lot of love. We roll up to your party, set up our cart, and serve premium fluffy shaved ice in your favorite flavors — then clean everything up before we go.</p>
+      <p>From a backyard birthday to a 200-person school festival, we make it easy: clear pricing, amazing flavors, and a setup that looks as good as it tastes.</p>
+      <div class="about-stats">
+        <div class="stat">
+          <div class="stat-num">20+</div>
+          <div class="stat-label">Flavors to choose from</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Mobile — we come to you</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">⭐⭐⭐⭐⭐</div>
+          <div class="stat-label">Repeat-booking regulars</div>
+        </div>
+      </div>
+      <div style="margin-top:1.6rem;">
+        <p style="font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:.7rem;">Where We Serve</p>
+        <div class="area-inner" style="justify-content:flex-start;">
+          <span class="area-chip-green">Sugar Land</span>
+          <span class="area-chip-green">Richmond</span>
+          <span class="area-chip-green">Rosenberg</span>
+          <span class="area-chip-green">Missouri City</span>
+          <span class="area-chip-green">Stafford</span>
+          <span class="area-chip-green">Katy</span>
+          <span class="area-chip-green">Wharton</span>
+          <span class="area-chip-green">Pearland</span>
+          <span class="area-chip-green">& surrounding areas</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-art">
+      <div class="photo-carousel" id="photoCarousel" role="region" aria-label="Superior Snowballs event photos" aria-roledescription="carousel">
+        <!-- Slide 1 — replace placeholder with: <img src="assets/photos/photo1.jpg" alt="describe the photo"> -->
+        <div class="carousel-slide active" role="group" aria-roledescription="slide" aria-label="Slide 1 of 5">
+          <div class="carousel-slide-placeholder" aria-hidden="true"><span>📸</span>Add your photos</div>
+        </div>
+        <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 2 of 5" aria-hidden="true">
+          <div class="carousel-slide-placeholder" aria-hidden="true"><span>📸</span>Add your photos</div>
+        </div>
+        <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 3 of 5" aria-hidden="true">
+          <div class="carousel-slide-placeholder" aria-hidden="true"><span>📸</span>Add your photos</div>
+        </div>
+        <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 4 of 5" aria-hidden="true">
+          <div class="carousel-slide-placeholder" aria-hidden="true"><span>📸</span>Add your photos</div>
+        </div>
+        <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5" aria-hidden="true">
+          <div class="carousel-slide-placeholder" aria-hidden="true"><span>📸</span>Add your photos</div>
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous photo" type="button">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M10 3L5 8l5 5"/></svg>
+        </button>
+        <button class="carousel-btn carousel-next" aria-label="Next photo" type="button">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>
+        </button>
+        <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Slide navigation"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Booking CTA -->
+<section class="book-cta" id="book">
+  <div class="wrap">
+    <div class="inquiry-wrap">
+
+      <!-- Left: CTA + direct contact -->
+      <div class="inquiry-left">
+        <p class="eyebrow-label">Let's Make It Happen</p>
+        <h2>Ready to make it a Superior day?</h2>
+        <p>Know your date and ready to go? Book directly online.</p>
+        <div class="book-cta-btns" style="justify-content:flex-start; margin-bottom:0;">
+          <a href="#packages" class="btn btn-primary btn-lg">See Our Packages →</a>
+        </div>
+        <div class="inquiry-divider"><span>or send us a message</span></div>
+        <p style="font-size:.9rem; color:var(--text-mid);">Not sure which package fits? Have a big group or a special request? Fill out the form and we'll get back to you with a custom quote.</p>
+      </div>
+
+      <!-- Right: Inquiry form -->
+      <div class="inquiry-form" role="form" aria-label="Event inquiry form">
+        <h3>Get a Custom Quote</h3>
+        <p>We'll follow up within 24 hours.</p>
+
+        <!-- IMPORTANT: Replace YOUR_FORM_ID below with your Formspree form ID.
+             Sign up free at formspree.io, create a form, and paste the ID here. -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="inquiryForm">
+
+          <div class="form-row" style="margin-bottom:1rem;">
+            <div class="form-group">
+              <label for="inq-name">Your Name *</label>
+              <input type="text" id="inq-name" name="name" required placeholder="Jane Smith" autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="inq-phone">Phone Number *</label>
+              <input type="tel" id="inq-phone" name="phone" required placeholder="(832) 555-0100" autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom:1rem;">
+            <label for="inq-email">Email Address *</label>
+            <input type="email" id="inq-email" name="email" required placeholder="jane@email.com" autocomplete="email">
+          </div>
+
+          <div class="form-row" style="margin-bottom:1rem;">
+            <div class="form-group">
+              <label for="inq-type">Event Type</label>
+              <select id="inq-type" name="event_type">
+                <option value="">Select one…</option>
+                <option>Birthday / Private Party</option>
+                <option>Organization / Sports Team</option>
+                <option>School Event</option>
+                <option>Festival / Block Party</option>
+                <option>Corporate / Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="inq-date">Event Date</label>
+              <input type="date" id="inq-date" name="event_date">
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom:1rem;">
+            <label for="inq-guests">Estimated Guest Count</label>
+            <select id="inq-guests" name="guest_count">
+              <option value="">Select a range…</option>
+              <option>Under 50</option>
+              <option>50 – 100</option>
+              <option>100 – 150</option>
+              <option>150 – 200</option>
+              <option>200+</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="margin-bottom:1.2rem;">
+            <label for="inq-msg">Questions or Details</label>
+            <textarea id="inq-msg" name="message" placeholder="Tell us anything helpful — location, theme, add-ons you're interested in…"></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary">Send My Inquiry →</button>
+            <small>We'll never share your info. No spam, ever.</small>
+          </div>
+        </form>
+
+        <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
+          ✅ Got it! We'll be in touch within 24 hours.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="wrap footer-slim">
+    <div class="footer-logo">
+      <img src="assets/stacked_pink_blue.png" alt="Superior Snowballs">
+    </div>
+    <div class="footer-legal">
+      © 2026 Superior Snowballs Shaved Ice Company · Sugar Land, TX · All rights reserved.
+    </div>
+  </div>
+  <div class="footer-rainbow-bar"></div>
+</footer>
+
+<!-- Booking Modal -->
+<div class="booking-modal" id="bookingModal" role="dialog" aria-modal="true" aria-label="Book your event">
+  <div class="booking-modal-backdrop" id="bookingModalBackdrop"></div>
+  <div class="booking-modal-panel">
+    <button class="booking-modal-close" id="bookingModalClose" aria-label="Close booking window" type="button">✕</button>
+    <div class="booking-modal-loading" id="bookingModalLoading">
+      <div class="loading-spinner"></div>
+      Loading booking…
+    </div>
+    <iframe class="booking-modal-iframe" id="bookingFrame" src="" title="Book your Superior Snowballs event" allow="payment"></iframe>
+  </div>
+</div>
+
+<script>
+// Photo carousel
+(function() {
+  const carousel = document.getElementById('photoCarousel');
+  if (!carousel) return;
+  const slides = carousel.querySelectorAll('.carousel-slide');
+  const dotsContainer = document.getElementById('carouselDots');
+  let current = 0;
+  let timer;
+
+  // Build dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+    dot.addEventListener('click', () => goTo(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    dotsContainer.children[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dotsContainer.children[current].classList.add('active');
+    resetTimer();
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(() => goTo(current + 1), 4500);
+  }
+
+  carousel.querySelector('.carousel-prev').addEventListener('click', () => goTo(current - 1));
+  carousel.querySelector('.carousel-next').addEventListener('click', () => goTo(current + 1));
+  resetTimer();
+})();
+
+// Inquiry form — Formspree AJAX submission
+const inquiryForm = document.getElementById('inquiryForm');
+const formSuccess = document.getElementById('formSuccess');
+if (inquiryForm) {
+  inquiryForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = inquiryForm.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    try {
+      const res = await fetch(inquiryForm.action, {
+        method: 'POST',
+        body: new FormData(inquiryForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        inquiryForm.style.display = 'none';
+        formSuccess.style.display = 'block';
+      } else {
+        btn.textContent = 'Something went wrong — try again';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = 'Something went wrong — try again';
+      btn.disabled = false;
+    }
+  });
+}
+
+// Calendly popup booking
+document.querySelectorAll('[data-book]').forEach(el => {
+  el.addEventListener('click', e => {
+    e.preventDefault();
+    if (typeof Calendly !== 'undefined') {
+      Calendly.initPopupWidget({ url: el.dataset.book });
+    } else {
+      window.open(el.dataset.book, '_blank');
+    }
+  });
+});
+
+// Hamburger menu
+const hamburger = document.getElementById('navHamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+  });
+  mobileMenu.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
+// Nav scroll shadow
+const navEl = document.querySelector('.nav');
+if (navEl) {
+  window.addEventListener('scroll', () => {
+    navEl.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+}
+
+// Scroll-based fade-in
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.feature-card, .pkg, .addon-card').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(24px)';
+  el.style.transition = 'opacity .5s ease, transform .5s ease';
+  observer.observe(el);
+});
+</script>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</body>
+</html>
