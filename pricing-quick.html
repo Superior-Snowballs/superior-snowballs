@@ -110,25 +110,48 @@
     font-weight: 700;
   }
 
+  /* Add-ons */
+  .section { margin-top: 16px; }
+  .addons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+  .addon {
+    display: flex; align-items: center; gap: 7px;
+    background: #F7FAFE; border-radius: 9px; padding: 6px 8px;
+  }
+  .addon-icon { font-size: 14px; flex-shrink: 0; }
+  .addon-name { font-size: 9.5px; font-weight: 700; color: #1A1A3E; line-height: 1.3; }
+
+  /* Flavors */
+  .flavor-chips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+  .flavor-chip {
+    display: inline-flex; align-items: center; gap: 4px;
+    background: #fff; border: 1px solid #e8e8e8; border-radius: 999px;
+    padding: 3px 8px; font-size: 8.5px; font-weight: 700; color: #1A1A3E;
+  }
+  .flavor-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+
   /* Footer */
   .footer {
-    margin-top: 22px;
-    padding-top: 16px;
+    margin-top: 14px;
+    padding-top: 12px;
     border-top: 1.5px solid #EBF8FE;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   .footer-note {
-    font-size: 10px;
+    font-size: 9px;
     color: #9898B0;
     font-weight: 700;
     line-height: 1.7;
   }
   .book-btn {
     background: #1A1A3E; color: #fff;
-    padding: 9px 24px; border-radius: 999px;
-    font-size: 11px; font-weight: 800;
+    padding: 7px 20px; border-radius: 999px;
+    font-size: 10px; font-weight: 800;
     text-decoration: none; white-space: nowrap;
   }
 </style>
@@ -221,10 +244,52 @@
 
   </div>
 
+  <!-- Add-ons -->
+  <div class="section">
+    <div class="eyebrow" style="margin-top:4px;">Add-ons &amp; Extras</div>
+    <div class="addons-grid">
+      <div class="addon"><span class="addon-icon">✨</span><div class="addon-name">Specialty flavors — Salty Dog, Piccadilly, Mango Nada, Natural Lemon/Lime</div></div>
+      <div class="addon"><span class="addon-icon">🍬</span><div class="addon-name">Regular toppings — cream, tajin, chamoy</div></div>
+      <div class="addon"><span class="addon-icon">🍯</span><div class="addon-name">Premium toppings — pickle bits, skittles, nerds, sour patch kids</div></div>
+      <div class="addon"><span class="addon-icon">🍭</span><div class="addon-name">Kandy Kabobs (set of 15)</div></div>
+      <div class="addon"><span class="addon-icon">🧊</span><div class="addon-name">Custom signature snow cone</div></div>
+      <div class="addon"><span class="addon-icon">🍋</span><div class="addon-name">Fresh squeezed lemonade</div></div>
+      <div class="addon"><span class="addon-icon">⏱</span><div class="addon-name">30-min time overage fee</div></div>
+      <div class="addon"><span class="addon-icon">🕐</span><div class="addon-name">60-min time overage fee</div></div>
+      <div class="addon"><span class="addon-icon">🚗</span><div class="addon-name">Travel fee (15+ miles)</div></div>
+    </div>
+  </div>
+
+  <!-- Flavors -->
+  <div class="section">
+    <div class="eyebrow" style="margin-top:4px;">Flavor Lineup — 18+ Options</div>
+    <div class="flavor-chips">
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#B22234"></div>Wild Cherry</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#FF5E7A"></div>Watermelon</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#FF7AA8"></div>Strawberry</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#F4A24B"></div>Mango</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#F9CF45"></div>Pineapple</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#E9D24A"></div>Banana</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#A6D84A"></div>Sour Apple</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#38B8E8"></div>Blue Raspberry</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#5EC6E8"></div>Piña Colada</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#FF9F45"></div>Dreamsicle</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#8E5BC9"></div>Grape</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#B07AD6"></div>Cotton Candy</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#5BC8E8"></div>Blue Bubble Gum</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#E8C8A0"></div>Wedding Cake</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#FF2D8E"></div>Pink Lemonade</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#C0304A"></div>Tigers Blood</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#3FB24E"></div>Lime</div>
+      <div class="flavor-chip"><div class="flavor-dot" style="background:#F0EFE8"></div>White Coconut</div>
+    </div>
+    <p style="font-size:8px;color:#9898B0;font-weight:700;margin-top:5px;">Final flavor selection confirmed at booking · Seasonal additions may be available</p>
+  </div>
+
   <div class="footer">
     <div class="footer-note">
-      Add-ons available: specialty flavors, regular & premium toppings, kandy kabobs, custom snow cone, fresh squeezed lemonade &amp; more.<br>
-      Travel fee may apply for events 15+ miles from Sugar Land. Contact us for a custom quote.
+      $3.50 per snow cone over package limit · Travel fee applies 15+ miles from Sugar Land<br>
+      © 2026 Superior Snowballs Shaved Ice Company · Sugar Land, TX
     </div>
     <a href="https://square.site/book/TME781CX3TVXK/superior-snowballs-shaved-ice" class="book-btn">Book Now →</a>
   </div>
