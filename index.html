@@ -890,7 +890,7 @@ a { text-decoration: none; color: inherit; }
   .inquiry-wrap { grid-template-columns: 1fr; }
   .inquiry-left h2, .inquiry-left p { text-align: center; }
   .form-row { grid-template-columns: 1fr; }
-  .inquiry-form { order: -1; }
+  .hide-on-mobile { display: none !important; }
 }
 .btn-white {
   background: var(--white);
@@ -1019,13 +1019,21 @@ a { text-decoration: none; color: inherit; }
   .hero-lead { margin-inline: auto; }
   .hero-btns, .trust-row { justify-content: center; }
   .hero-art { display: none; }
+  .hero-eyebrow { display: none; }
   .about-art { order: -1; }
+  .about-stats { justify-content: center; }
+  .stat { text-align: center; }
   .features-grid { grid-template-columns: 1fr; }
   .packages-grid { grid-template-columns: 1fr; max-width: 480px; margin-inline: auto; }
   .nav-links { display: none; }
+  .nav-inner { justify-content: space-between; }
+  .nav-mascot-img { height: 68px; }
+  .nav-wordmark-img { height: 40px; margin-left: -28px; }
 }
 @media (max-width: 600px) {
   .packages-grid { max-width: 100%; }
+  .flavor-chips { display: grid; grid-template-columns: repeat(2, 1fr); }
+  .flavor-chip { justify-content: center; }
 }
 
 /* ── PHOTO CAROUSEL ─────────────────────────────────────────────── */
@@ -1585,8 +1593,8 @@ a { text-decoration: none; color: inherit; }
       <p>From a backyard birthday to a 200-person school festival, we make it easy: clear pricing, amazing flavors, and a setup that looks as good as it tastes.</p>
       <div class="about-stats">
         <div class="stat">
-          <div class="stat-num">20+</div>
-          <div class="stat-label">Flavors to choose from</div>
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Years in business</div>
         </div>
         <div class="stat">
           <div class="stat-num">100%</div>
@@ -1651,12 +1659,11 @@ a { text-decoration: none; color: inherit; }
       <div class="inquiry-left">
         <p class="eyebrow-label">Let's Make It Happen</p>
         <h2>Ready to make it a Superior day?</h2>
-        <p>Know your date and ready to go? Book directly online.</p>
-        <div class="book-cta-btns" style="justify-content:flex-start; margin-bottom:0;">
+        <p class="hide-on-mobile">Know your date and ready to go? Book directly online.</p>
+        <div class="book-cta-btns hide-on-mobile" style="justify-content:flex-start; margin-bottom:0;">
           <a href="#packages" class="btn btn-primary btn-lg">See Our Packages →</a>
         </div>
-        <div class="inquiry-divider"><span>or send us a message</span></div>
-        <p style="font-size:.9rem; color:var(--text-mid);">Not sure which package fits? Have a big group or a special request? Fill out the form and we'll get back to you with a custom quote.</p>
+        <p class="hide-on-mobile" style="font-size:.9rem; color:var(--text-mid);">Not sure which package fits? Have a big group or a special request? Fill out the form and we'll get back to you with a custom quote.</p>
       </div>
 
       <!-- Right: Inquiry form -->
