@@ -11,7 +11,6 @@
 <meta property="og:type" content="website" />
 <link rel="canonical" href="https://www.superiorsnowballs.com/" />
 <link rel="icon" type="image/png" href="assets/mascot-running.png">
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
@@ -229,7 +228,7 @@ a { text-decoration: none; color: inherit; }
 .hero-grid {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.3fr;
   gap: clamp(2rem, 5vw, 4rem);
   align-items: center;
 }
@@ -970,24 +969,26 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: translateY(-8%);
 }
 .hero-mascot-wrap::before {
   content: "";
   position: absolute;
-  width: 78%;
+  width: 100%;
   aspect-ratio: 1;
   border-radius: 50%;
   background: var(--blue-lt);
-  top: 4%;
+  top: 55%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   z-index: 0;
   box-shadow: 0 20px 60px rgba(56,184,232,.18);
 }
 .hero-mascot-wrap img {
   position: relative;
   z-index: 1;
-  width: 100%;
+  width: 105%;
+  transform: translateY(11%);
 }
 
 .footer-logo {
@@ -1332,7 +1333,7 @@ a { text-decoration: none; color: inherit; }
     <div class="nav-cta" style="flex-direction:column;align-items:stretch;gap:.3rem;">
       <div style="display:flex;gap:.6rem;justify-content:flex-end;">
         <a href="#book" class="btn btn-outline" aria-label="Request a quote">Request a Quote</a>
-        <a href="https://square.site/book/TME781CX3TVXK/superior-snowballs-shaved-ice" data-book="https://calendly.com/superior-snowballs" class="btn btn-primary">Book Now</a>
+        <a href="#" data-cal-link="superiorsnowballs" data-cal-origin="https://cal.com" class="btn btn-primary">Book Now</a>
       </div>
       <a href="tel:+18323661402" style="display:flex;align-items:center;justify-content:space-between;font-weight:700;font-size:.8rem;color:var(--text-mid);text-decoration:none;width:100%;padding:0 .4rem;">
         <span style="padding-left:.3rem;">📞 Have questions? Call us!</span>
@@ -1350,7 +1351,7 @@ a { text-decoration: none; color: inherit; }
       <a href="#packages" class="mobile-link">Packages</a>
       <a href="#flavors" class="mobile-link">Flavors</a>
       <a href="#about" class="mobile-link">About &amp; Service Area</a>
-      <a href="https://square.site/book/TME781CX3TVXK/superior-snowballs-shaved-ice" data-book="https://calendly.com/superior-snowballs" class="mobile-link mobile-cta">Book Now →</a>
+      <a href="#" data-cal-link="superiorsnowballs" data-cal-origin="https://cal.com" class="mobile-link mobile-cta">Book Now →</a>
     </div>
   </div>
 </header>
@@ -1426,7 +1427,7 @@ a { text-decoration: none; color: inherit; }
             <li>Snow cone experts on-site</li>
             <li>Full mobile setup & breakdown</li>
           </ul>
-          <a href="https://square.site/book/TME781CX3TVXK/superior-snowballs-shaved-ice" data-book="https://calendly.com/superior-snowballs/30min" class="pkg-btn" style="background:var(--pink)">Book Sweet Starter →</a>
+          <a href="#" data-cal-link="superiorsnowballs/sweet-starter" data-cal-origin="https://cal.com" class="pkg-btn" style="background:var(--pink)">Book Sweet Starter →</a>
           <p class="pkg-overage">$3.50 per snow cone over 50</p>
         </div>
       </div>
@@ -1447,7 +1448,7 @@ a { text-decoration: none; color: inherit; }
             <li>Snow cone experts on-site</li>
             <li>Full mobile setup & breakdown</li>
           </ul>
-          <a href="https://square.site/book/TME781CX3TVXK/superior-snowballs-shaved-ice" data-book="https://calendly.com/superior-snowballs/the-classic" class="pkg-btn" style="background:var(--blue)">Book The Classic →</a>
+          <a href="#" data-cal-link="superiorsnowballs/classic" data-cal-origin="https://cal.com" class="pkg-btn" style="background:var(--blue)">Book The Classic →</a>
           <p class="pkg-overage">$3.50 per snow cone over 100</p>
         </div>
       </div>
@@ -1467,7 +1468,7 @@ a { text-decoration: none; color: inherit; }
             <li>Snow cone experts on-site</li>
             <li>Full mobile setup & breakdown</li>
           </ul>
-          <a href="https://square.site/book/TME781CX3TVXK/superior-snowballs-shaved-ice" data-book="https://calendly.com/superior-snowballs/premium-event" class="pkg-btn" style="background:var(--green)">Book Superior Event →</a>
+          <a href="#" data-cal-link="superiorsnowballs/premium-event" data-cal-origin="https://cal.com" class="pkg-btn" style="background:var(--green)">Book Superior Event →</a>
           <p class="pkg-overage">$3.50 per snow cone over 150</p>
         </div>
       </div>
@@ -1854,17 +1855,6 @@ if (inquiryForm) {
   });
 }
 
-// Calendly popup booking
-document.querySelectorAll('[data-book]').forEach(el => {
-  el.addEventListener('click', e => {
-    e.preventDefault();
-    if (typeof Calendly !== 'undefined') {
-      Calendly.initPopupWidget({ url: el.dataset.book });
-    } else {
-      window.open(el.dataset.book, '_blank');
-    }
-  });
-});
 
 // Hamburger menu
 const hamburger = document.getElementById('navHamburger');
@@ -1907,6 +1897,13 @@ document.querySelectorAll('.feature-card, .pkg, .addon-card').forEach(el => {
   observer.observe(el);
 });
 </script>
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", { origin: "https://cal.com" });
+Cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
+document.querySelectorAll('[data-cal-link]').forEach(el => {
+  el.addEventListener('click', e => e.preventDefault());
+});
+</script>
 </body>
 </html>
